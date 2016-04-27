@@ -1,0 +1,178 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="manyawar.master.cs" Inherits="manyawar" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Buy Sherwanis Online | Kurtas for Men | Indo-Westerns | Manyavar</title>
+   
+    <link href="css/ninja-slider.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/3a072efe7c517a476689b623654ee066_1422529641.css" rel="stylesheet" />
+   
+    <%--<script src="js/c91d6e0c212f0f9a539ebe4ad7ab52c2_1439197881.js"></script>--%>
+    <script src="js/ninja-slider.js"></script>
+    <link href="css/footer-distributed.css" rel="stylesheet" />
+    <link href="css/StyleSheet.css" rel="stylesheet" />
+    <script src="js/jquery.min.js"></script>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        .sub-menu_new {
+            position: absolute;
+            width: 219px;
+            top: 14px;
+            color: #000;
+            left: -50px;
+            z-index: 9999;
+            display: none !important;
+        }
+
+            .sub-menu_new ul {
+                float: left;
+                background: #120707;
+                margin: 0px;
+                padding: 0px;
+            }
+
+                .sub-menu_new ul li {
+                    color: #FFF;
+                    width: 219px;
+                    float: left;
+                    padding: 10px 0px;
+                    margin: 0px;
+                    border-bottom: #333 dotted 1px;
+                }
+
+                    .sub-menu_new ul li a {
+                        color: #FFF;
+                        width: 100%;
+                        font-size: 12px;
+                        margin: 0px;
+                        padding: 0px;
+                        line-height: 23px;
+                    }
+
+                    .sub-menu_new ul li:hover {
+                        background-color: #F78022 !important;
+                    }
+
+        .show-sub-menu_new:hover .sub-menu_new {
+            display: block !important;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="background-color: #000000">
+
+            <div style="float: right;">
+                <table>
+                    <tr>
+                        <td><a href="javascript:void(0)" class="anchor">About Us</a></td>
+                        <td><a href="javascript:void(0)" class="anchor">Contact Us</a></td>
+                        <td><a href="javascript:void(0)" class="anchor">Store Locator</a></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="clear">
+            </div>
+            <div class="second">
+                <nav class="nav">
+                    <ul class="home_ul_sp">
+                        <li class="new-welcome-name">
+                            <img src="images/person_icon.png" alt="manyavar" id="img" />
+                        </li>
+                        <li class="responsive-big"><a class="popuplogin" title="" href="sign.aspx">
+                            <asp:Label runat="server" Text="" ID="show"></asp:Label></a></li>
+
+                        <span class="home_span_sp"><a href="Default.aspx">
+                            <img src="images/logo.jpg" alt="manyavar" class="home_logo_sp" /></a></span>
+
+                        <li>
+                            <img src="images/phone.png" /></li>
+                        <li class="new-toll-free ">Phone: 1800 3070 0500
+                        </li>
+
+                        <li style="position: relative" class="show-sub-menu_new">
+                            <img src="images/cart%20(1).png" alt="My Options" />
+                            <span style="position: absolute;" class="sub-menu_new">
+
+                                <ul>
+                                    <li><a href="javascript:void(0)">My Account </a></li>
+                                    <li><a href="javascript:void(0)">Change Password</a></li>
+                                    <li><a href="javascript:void(0)">My Orders</a></li>
+                                    <li><a href="javascript:void(0)">My Wishlist </a></li>
+
+                                    <div style="clear: both"></div>
+                                </ul>
+                            </span>
+                        </li>
+                        <li>
+                            <div style="font-size: 18px; color: white; border: 0px solid #301515; float: right; margin-right: 15px; margin-top: 40px;">
+
+
+                                <asp:ImageButton ID="ImageButton1" ImageUrl="Images/kart.png" runat="server" Height="20px" Width="30px" CausesValidation="False" />
+                                (<asp:Label ID="CartCount" runat="server">0</asp:Label>)
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="clear"></div>
+            <div class="full-width Header">
+
+                <div class="row-home" style="margin-bottom: 0;">
+                    <asp:Repeater ID="rptCategories" runat="server" >
+                        <HeaderTemplate>
+                           
+                        </HeaderTemplate>
+                        <ItemTemplate>
+                             <div class="menu">
+                                  <ul class="flexy-menu-home flexy-menu-safe orange" style="padding-top: 23px">
+                      
+                                <li><a href="product.aspx?id=<%#Eval("Id") %>" class="menu"><%#Eval("CategoryName") %></a></li>
+                            
+                                 </div>
+                        </ItemTemplate>
+                        <FooterTemplate>
+                            </ul></div>
+                        </FooterTemplate>
+                    </asp:Repeater>
+                </div>
+
+            </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <div style="text-align: center">
+            <footer class="footer-distributed">
+                <div style="margin-top: -20px">
+                    <div class="footer-right">
+
+                        <a href="javascript:void(0)"><i class="fa fa-facebook">
+                            <img src="images/facebook.png" /></i></a>
+                        <a href="javascript:void(0)"><i class="fa fa-twitter">
+                            <img src="images/twitter-footer.png" /></i></a>
+                        <a href="javascript:void(0)"><i class="fa fa-linkedin">
+                            <img src="images/instagram.png" /></i></a>
+                        <a href="javascript:void(0)"><i class="fa fa-github">
+                            <img src="images/pinterest.png" /></i></a>
+
+                    </div>
+
+                    <div class="footer-left">
+                        <p style="float: left">
+                            Company Name: <span style="color: #e97318">Manyawar The Fashion Hub</span><br />
+                            &copy; 2015  created by: Krishna soni
+                        </p>
+                    </div>
+            </footer>
+        </div>
+            </div>
+    </form>
+</body>
+</html>

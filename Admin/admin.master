@@ -1,0 +1,87 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin.master.cs" Inherits="Admin_admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style>
+        .togal {
+            display: block !important;
+        }
+    </style>
+    <script src="js/jquery.min.js"></script>
+    <script src="../js/jquery-1.4.1.min.js"></script>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link href="../css/Grid.css" rel="stylesheet" />
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="../css/screen.css" rel="stylesheet" />
+
+
+    <script>
+        $(document).ready(function () {
+
+            $(".showhide-account").click(function () {
+
+                $('.account-content').slideToggle("fast");
+
+
+            });
+        });
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="background-color: #800000">
+
+
+            <div class="clear">
+            </div>
+            <div id="page-top-outer">
+                <div id="logo">
+                    <a href="Defalut.aspx">
+                        <h1 style="color: white; font-family: Arial; margin-top: -20px">MANYAVAR EARN YOUR RESPECT<br />
+                            <h4 style="color: white; font-family: Arial; margin-top: 2px">JAIPUR(RAJASTHAN)</h4>
+                        </h1>
+
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="clear"></div>
+
+        <%--<div class="full-width Header">
+                <div class="row-home" style="margin-bottom: 0;margin-left:480px">
+
+                    <ul class="flexy-menu-home flexy-menu-safe orange" style="padding-top: 23px">
+                        <li class="showhide" style="display: none;"><span class="title">MENU</span><span class="icon"><em></em><em></em><em></em><em></em></span></li>
+
+                        <li><a href="#" class="menu">CATEGORY</a></li>
+                        <li>
+                            <a href="#" class="menu">PRODUCT</a></li>
+                        <li><a href="#" class="menu">Logout</a></li>
+                        
+                    </ul>
+
+                </div>
+            </div>--%>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <div id="footer">
+            <!--  start footer-left -->
+            <div id="footer-left">
+                Copyright Permute It Technology. <a href="#">www.manyavar.com</a>. All rights reserved.
+            </div>
+            <!--  end footer-left -->
+            <div class="clear">&nbsp;</div>
+        </div>
+
+    </form>
+</body>
+</html>
